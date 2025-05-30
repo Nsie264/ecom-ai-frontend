@@ -787,9 +787,10 @@ class CartScreen extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 Get.back();
-                Get.offAllNamed('/home');
+                Get.back();
+
               },
-              child: const Text('TIẾP TỤC MUA SẮM'),
+              child: const Text('QUAY LẠI GIỎ HÀNG'),
             ),
           ],
         ),

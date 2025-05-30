@@ -48,6 +48,19 @@ class LoginSelectionScreen extends StatelessWidget {
               ),
               child: const Text('Admin Account'),
             ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () => Get.toNamed(Routes.PRODUCT_MANAGEMENT),
+              style: ElevatedButton.styleFrom(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 50,
+                  vertical: 15,
+                ),
+                textStyle: const TextStyle(fontSize: 18),
+                backgroundColor: Colors.green,
+              ),
+              child: const Text('Product Management'),
+            ),
           ],
         ),
       ),
@@ -87,10 +100,7 @@ class LoginSelectionScreen extends StatelessWidget {
       );
 
       if (result) {
-        Future.delayed(
-          const Duration(seconds: 2),
-        );
-        // Navigate to the admin training screen instead of products
+        Future.delayed(const Duration(seconds: 2));
         Get.offAllNamed(Routes.ADMIN_TRAINING);
         Get.snackbar(
           'Admin Mode',
